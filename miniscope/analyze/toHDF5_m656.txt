@@ -1,0 +1,12 @@
+B:\data\miniscope\raw\p104\m656\131003-M656-MAG1\DFOF\concatenated_131003-M656-MAG1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131004-M656-PAV1\DFOF\concatenated_131004-M656-PAV1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131005-M656-PAV02\DFOF\concatenated_131005-M656-PAV02_recording_20131005_184834_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131006-M656-PAV03\DFOF\concatenated_131006-M656-PAV03_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131007-M656-PAV04\DFOF\concatenated_131007-M656-PAV04_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131008-M656-PAV05\DFOF\concatenated_131008-M656-PAV05_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131010-M656-PAV06\DFOF\concatenated_131010-M656-PAV06_recording_20131010_140552_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131011-M656-PAV07\DFOF\concatenated_131011-M656-PAV07_recording_20131011_150451_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131012-M656-PAV08\DFOF\concatenated_131012-M656-PAV08_recording_20131012_130558_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131014-M656-PAV09\DFOF\concatenated_131014-M656-PAV09_recording_20131014_113404_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131015-M656-PAV10\DFOF\concatenated_131015-M656-PAV10_recording_20131015_160109_trial1_fullSession_DFOF.tif
+B:\data\miniscope\raw\p104\m656\131016-M656-PAV11\DFOF\concatenated_131016-M656-PAV11_recording_20131016_170615_trial1_fullSession_DFOF.tif

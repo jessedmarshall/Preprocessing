@@ -1,0 +1,2 @@
+date,daytime,folder,algorithm,runtime_seconds,frames,width,height,parallel,workers,minIters,maxIters,maxSqSize,maxDeltaParams,gridSpacing,gridWidth,initMethod,sqSizeX,sqSizeY,numSignalsDetected
+2015.06.14,00:00,2015_06_10_p370_m769_mag02,cellmax,13939,NaN,NaN,NaN,0,0,50,300,NaN,NaN,NaN,NaN,grid,NaN,NaN,NaN

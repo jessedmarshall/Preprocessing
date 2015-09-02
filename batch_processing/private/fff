@@ -1,0 +1,17 @@
+subjectTablePath = 'C:\b\Dropbox\biafra_jones\analysis\pav\2014_03_11\rawLickData.tab';
+% over all trials, run
+for subjNo=1:length(nameList)
+	try
+		thisSubj = nameList(subjNo);
+		tmpStruct = controllerAnalysis('folderListInfo',char(strcat('private\analyze\p104\',thisSubj,'.txt')),'runArg','stimTriggeredAverage','stimNameArray',{'lick', 'CS', 'US'},'subjectTablePath',subjectTablePath,'stimIdNumArray',[24 30 31],'picsSavePath','private\pics\p104\');
+		% ostruct.(char(thisSubj)) = tmpStruct;
+		ostruct{subjNo} = tmpStruct;
+	catch err
+		display(repmat('@',1,7))
+		disp(getReport(err,'extended','hyperlinks','on'));
+		display(repmat('@',1,7))
+	end
+end
+
+	tmpMatch = regexp(thisSubj,'(m|M|f|F)\d+', 'tokens');
+	thisSubjNum = str2num(char(strrep(thisSubj,tmpMatch{1},'')));

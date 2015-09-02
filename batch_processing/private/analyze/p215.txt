@@ -1,0 +1,6 @@
+#A:\data\huntington\p215_reversal\2014_05_31_p215_F043_reversalPre01_trial15
+#A:\data\huntington\p215_reversal\2014_06_01_p215_F043_reversalPre02_trial15
+#A:\data\huntington\p215_reversal\2014_06_04_p220_F043_reversalPre03_trial20
+#A:\data\huntington\p215_reversal\2014_06_04_p220_F043_reversalPre03_trial20\fft_filtered
+#A:\data\huntington\p215_reversal\2014_06_04_p220_F043_reversalPre03_trial20\not_filtered
+A:\data\huntington\p215_reversal\2014_06_05_p220_F043_reversalPre04_trial201

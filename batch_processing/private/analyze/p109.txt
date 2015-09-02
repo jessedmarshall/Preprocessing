@@ -1,0 +1,4 @@
+#A:\biafra\data\miniscope\epmaze\p109\2013_09_30_p109_m493_epmaze1\DFOF\bandpass
+A:\biafra\data\miniscope\epmaze\p109\2013_09_26_p109_m561_epmaze1\DFOF,50,25
+#A:\biafra\data\miniscope\epmaze\p109\2013_09_30_p109_m493_epmaze1\DFOF
+#A:\biafra\data\miniscope\epmaze\p109\2013_09_30_p109_m497_epmaze1\DFOF

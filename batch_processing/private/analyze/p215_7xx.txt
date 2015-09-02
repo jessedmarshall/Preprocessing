@@ -1,0 +1,5 @@
+\\B173_MINI2\downsampled\2014_10_07_p215_m777_reversalAcq04
+\\B173_MINI2\downsampled\2014_10_07_p215_m778_reversalAcq01
+\\B173_MINI2\downsampled\2014_10_07_p215_m779_reversalAcq04
+\\B173_MINI2\downsampled\2014_10_07_p215_m790_revTrain20
+\\B173_MINI2\downsampled\2014_10_07_p215_m791_reversalAcq04

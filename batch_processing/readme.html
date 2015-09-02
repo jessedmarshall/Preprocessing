@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>biafra ahanonu - batch processing documentation</title>
+	<style type="text/css">
+		html{
+			background-color: rgb(250,250,250);
+		}
+		div,a,span,form,input,img,h1,h2,h3{
+			-moz-transition:all .5s;
+			-o-transition:all .5s;
+			-webkit-transition:all .5s;
+			transition:all .5s
+		}
+		body{
+			font-family: Arial,Sans-Serif;
+			padding-bottom: 7em;
+			width: 80%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		img{
+			width:100%;
+		}
+		a{
+			color:red;
+		}
+		strong{
+			color: blue;
+		}
+		em{
+			color:green;
+		}
+		a:hover, strong:hover,em:hover{
+			color:black;
+		}
+		h1:hover,h2:hover,h3:hover{
+			color:red;
+		}
+		img:hover{
+			opacity: 0.5;
+		}
+		hr{
+			background-color: red;
+			border: 0;
+			height: 3px;
+		}
+		code{
+			display: block;
+			background-color: rgb(242,200,200);
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<h1>batch processing documentation</h1>
+	<h2>biafra ahanonu | schnitzer lab</h2>
+	<hr>
+	<h2><a href="docs/index.html" target="_blank">click here to view matlab documentation</a></h2>
+	<ul>
+		<li><p>run <em>generateDocs.m</em> to generation matlab documentation (if not already present)</p></li>
+		<!-- <img src="docs/m2html.png"> -->
+		<li><a href="docs/m2html.png" target="_blank">graph of project dependencies</a></li>
+		<!-- <hr> -->
+		<!-- <p>readme for controlling (batch) pre-processing and analysis of miniscope data</p> -->
+	</ul>
+	<hr>
+	<h3>readme started: 2013.11.11 | updated: 2014.04.04 [21:06:24]</h3>
+	<hr>
+	<section><h3>contents</h3>
+		<ul>
+			<li><a href='#goals'>goals</a></li>
+			<li><a href='#general'>general</a></li>
+			<li><a href='#data'>data organization</a></li>
+			<li><a href='#usage'>usage</a></li>
+			<li><a href='#example'>example pipeline (matlab)</a></li>
+			<li><a href='#pre'>pre-processing with controllerPreprocessMovie.m</a></li>
+			<li><a href='#analysis'>analysis with controllerAnalysis.m</a></li>
+			<li><a href='#notes'>notes/problems</a></li>
+			<li><a href='#todo'>to-do</a></li>
+		</ul>
+	</section>
+	<section><h3 id='goals'>goals</h3>
+		<ul>
+			<li><strong>problem definition</strong> automation of preprocessing and analysis of miniscope data.</li>
+			<li><strong>solution</strong> develop a set of atomic, extensible functions that are called by controller/wrapper functions for higher-level analysis/processing.</li>
+		</ul>
+	</section>
+	<section><h3 id='general'>general</h3>
+		<ul>
+			<li>Controllers (i.e. wrapper functions) are located in the root directory, they should be used to call individual functions that only do at most a couple operations and accept a set of simple inputs (e.g. avoid complex structures as inputs).</li>
+			<li>The controllers should handle pushing around and saving of data NOT the individual functions.</li>
+			<li>getOptions MUST be loaded for most (if not all?) of the functions to work. This function basically handles varargin in a standardized manner.</li>
+		</ul>
+	</section>
+	<section><h3 id='data'>data organization</h3>
+		<ul>
+			<li>To make the code as general/reusable as possible, data is moved around as plain 2d/3D matrices. If you want to organize that differently, do so at the controller level rather than inside functions.</li>
+			<li>Inputs to the current controllers involve a text file pointing to folders that contain files of interest.</li>
+			<li>Data is organized as follows:</li>
+			<ul>
+				<li>PC/IC filters: [PxMxN] matrix with M and N being height/width of video and P = {nPCs | nICs}, yes, the 1st dimension should be the last...legacy overrules refactoring in this case.</li>
+				<li>PC/IC traces: [Pxf] matrix where P = {nPCs | nICs} and f = frames (of the movie)</li>
+				<li>outputStruct: takes on various forms, see each controller for details</li>
+			</ul>
+			<li>In general, all experiments should follow the following naming scheme, allows easy tracking of what was done and parsing by scripts.</li>
+			<ul>
+				<li>YYYY_MM_DD_pXXX_mXXX_assayXX_trialXX</li>
+				<li>YYYY_MM_DD = normal year month day scheme</li>
+				<li>pXXX = protocol number, e.g. p162, for the set of experiments</li>
+				<li>mXXX = subject ID/number, e.g. m805</li>
+				<li>assayXX = assay ID and session number, e.g. vonfrey01 is the 1st von frey assay session</li>
+				<li>trialXX = the trial number of the current assay session, only applicable if multiple trials in the same assay session</li>
+			</ul>
+		</ul>
+	</section>
+	<section><h3 id='usage'>usage</h3>
+		<ul>
+			<li><strong>loadBatchFxns.m</strong> should be loaded before using any of the functions, it effectively places the correct folders in the path.</li>
+			<li><strong>/private</strong> sub-folder should be used to store user-specific information and data</li>
+		</ul>
+	</section>
+	<section><h3 id='example'>example pipeline (matlab)</h3>
+		<ul>
+			<li>Assume that <em>protocolFile</em> contains a list of directories that contain the movies to be processed.</li>
+		</ul>
+		<code><pre>
+% =====================
+% DOWMSAMPLING
+% downsample if all decompressed files are in the same folder
+ioptions.folderListInfo = 'A:\data\processing';
+ioptions.runArg = 'downsampleInscopix';
+ostruct = controllerAnalysis('options',ioptions);
+% re-create folder structure
+output = moveFilesToFolders('E:\','A:\data\processing');
+% ---
+% OR if downsample if reading from a list
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.runArg = 'downsampleInscopix';
+ostruct = controllerAnalysis('options',ioptions);
+% =====================
+% FOLDER LIST
+% make a txt file containing paths to relevant files
+% =====================
+% PREPROCESSING
+% pre-process files
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.runArg = 'preprocessInscopix';
+ostruct = controllerAnalysis('options',ioptions);
+% look at dfofs
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.fileFilterRegexp = 'cropped';
+ioptions.runArg = 'playShortClip';
+ostruct = controllerAnalysis('options',ioptions);
+% =====================
+% PCAICA
+% list of [PCs ICs] for each subject, the subject number should be somewhere in the path with a suffix of m### or f###, e.g. m892 or f291
+ioptions.pcaicaList.('m81') = [700 550];
+ioptions.pcaicaList.('m84') = [700 550];
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.fileFilterRegexp = 'cropped';
+ioptions.runArg = 'pcaicaInscopix';
+ostruct = controllerAnalysis('options',ioptions);
+% sort ICs
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.fileFilterRegexp = 'cropped';
+ioptions.runArg = 'icaChooser';
+ostruct = controllerAnalysis('options',ioptions);
+% =====================
+% CELLMAPS
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.fileFilterRegexp = 'cropped';
+ioptions.picsSavePath = 'private\pics\FOLDERNAME\';
+ioptions.runArg = 'objectMaps';
+ostruct = controllerAnalysis('options',ioptions);
+% =====================
+% FIRING STATS
+ioptions.folderListInfo = 'private\analyze\fileList.txt';
+ioptions.fileFilterRegexp = 'cropped';
+ioptions.picsSavePath = 'private\pics\FOLDERNAME\';
+ioptions.runArg = 'computePeaks';
+ostruct = controllerAnalysis('options',ioptions);
+		</pre></code>
+		<strong>OR</strong>
+		<code>
+			% location of analysis file <br>
+			protocolFile = 'private\analyze\p200.txt'];<br>
+			% run the entire pipeline, assumes recording.*.hdf5 naming scheme from inscopix default.<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'runArg','fullPipeline');
+		</code>
+		<strong>OR</strong>
+		<code>
+			% location of analysis file <br>
+			protocolFile = 'private\analyze\p200.txt'];<br>
+			% downsample movies<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'fileFilterRegexp','recording.*.hdf5','datasetName','/images');<br>
+			% pre-process movies<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'fileFilterRegexp','concat_.*.h5');<br>
+			% crop movies<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'fileFilterRegexp','5hz','pxToCrop',4);<br>
+			% pcaica<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'fileFilterRegexp','cropped','runArg','pcaica');<br>
+			% em algorithm (run AFTER pca ica)<br>
+			out1 = controllerAnalysis('folderListInfo',protocolFile,'fileFilterRegexp','cropped','runArg','emLaceyAnalysis');<br>
+		</code>
+	</section>
+	<section><h3 id='pre'>pre-processing with controllerPreprocessMovie.m</h3>
+		<ul>
+			<li>primary m-file: contains calls to functions to turboreg, normalize, dfof, and downsample the movie. The code is modular so different pre-processing can be added to the pipeline pretty easily.</li>
+			<li>variable arguments</li>
+			<ul>
+				<li><strong>datasetName</strong> - used to change the dataset name in the HDF5 file, this is propagated downward</li>
+				<li><strong>'fileFilterRegexp</strong> - 'concatenated_', is the regexp for the name of the downsampled (for the moment) movies.</li>
+				<li><strong>'frameList</strong> - [], can make this a 1xN vector indicating the frames of the movie you want to look at</li>
+				<li><strong>'turboregType</strong> - 'preselect', means that you preselect the regions to turboreg for all the movies before going forward</li>
+			</ul>
+			<li><strong>example</strong> - preStruct = controllerPreprocessMovie('folderListPath', 'analyze\exampleTrialList.txt');</li>
+		</ul>
+	</section>
+	<section><h3 id='analysis'>analysis with controllerAnalysis.m</h3>
+		<ul>
+			<li>primary m-file helps coordinate calling of separate functions that call main pcaica, EM, event detection, etc. analysis.</li>
+			<li>variable arguments</li>
+			<ul>
+				<li><strong>datasetName</strong> - used to change the dataset name in the HDF5 file, this is propagated downward</li>
+				<li><strong>folderListInfo</strong> - either a structure from controllerPreprocessMovie</li>
+				<li>fileFilterRegexp - 'concatenated_.*.h5' is the default, change to suit your needs (e.g. controllerAnalysis('', 'analyze\p728_batch_pre.txt','fileFilterRegexp','kitty.*.tif'))</li>
+			</ul>
+			<li>outputStuct is given from controllerPreprocessMovie, has information about location of dfof path, etc.</li>
+			<li>downsampleHdf5Movie function is located here for batch purposes</li>
+			<li>example</li>
+			<ul>
+				<li>outputStruct = controllerAnalysis('folderListInfo', 'analyze\exampleTrialList.txt');</li>
+				<li>outputStruct = controllerAnalysis('folderListInfo', preStruct);</li>
+			</ul>
+		</ul>
+	</section>
+	<section><h3 id='todo'>imageJ in Matlab</h3>
+		Add ability to call Miji from Matlab by adding \Fiji.app\scripts to the Matlab path.
+
+		We call imageJ to do some of the preprocessing, but the default size of the Java virtual memory is limited to increase, follow the below instructions:
+
+		<a href='http://www.mathworks.com/matlabcentral/answers/92813-how-do-i-increase-the-heap-space-for-the-java-vm-in-matlab-6-0-r12-and-later-versions' target='_blank'>How to increase java virtual memory size in Matlab.</a> Basically create a file called <strong>java.opts</strong> and change the max memory size to something like 50GB, e.g. <strong>-Xmx50000m</strong>.
+
+		<a href='http://bigwww.epfl.ch/sage/soft/mij/' target='_blank'>More Miji information.</a>
+
+	</section>
+	<section><h3 id='notes'>notes/problems</h3>
+		<ul>
+			<li>general</li>
+				<ul>
+					<li>The code works with .tif (only if less than 4GB, per 32-bit offset restrictions), but HDF5 files are preferred.</li>
+					<li>The code currently assumes that HDF5 files containing movies place the movies in a dataset named /1 (or 1 when exporting from ImageJ) inside the .h5 file.</li>
+					<ul>
+						<li><strong>datasetName</strong> variable argument can be used to change this.</li>
+					<li>The code doesn't assume much about the structure of your data folder organization, only that you give it folders with .tiff (size less than 4GB each) or .h5 (unlimited size). If there are multiple movies in a folder, they will be concatenated for the batch analysis.</li>
+				</ul>
+			<li>pre-processing</li>
+				<ul>
+					<li>If getting blank frames with <strong>transfturboreg</strong>, install <a href='http://www.microsoft.com/en-us/download/details.aspx?id=40784' target='_blank'>Visual C++ Redistributable Packages for Visual Studio 2013</a></li>
+					<li>Normalization (e.g. bandpass divisive) is currently disabled. Jesse and i tested PCA-ICA on the same movies with and without this step and there was no discernible difference in the quality of the traces. - <em>Note: after looking at stim triggered cuts of cells, the normalization definitely should help reduce false positives.</em></li>
+					<li>Turboreg currently splits the movie into chunks for parallel image registration (avoid serialization errors due to transfer to large movies to workers). The actual turboreg isn't as i assume you only turboreg a sub-region. This will be updated soon.</li>
+					<li>Turboreg currently uses the first frame for turboreg, so either change that part of the code or TURN ON the LED before beginning a trial.</li>
+					<li>The code currently asks for PCs/ICs, the option is there to add the nPCs and nICs in the input file with the folders (e.g. \path,nICs,nPCs).</li>
+				</ul>
+			<li>analysis</li>
+				<ul>
+					<li>Viewing slices of movies currently only support analyzing a slice of a movie for .h5 files. tif support in a bit</li>
+				</ul>
+		</ul>
+	</section>
+	<section><h3 id='todo'>to-do</h3>
+		<ul>
+			<li>merge controllerPreprocessMovie and controllerAnalysis into a single function; controllerPreprocessMovie could be wrapped as a sub-function in controllerAnalysis. This would reduce maintenance overhead. - <strong>update</strong> this is nearly complete.</li>
+		</ul>
+	</section>
+</body>
+</html>

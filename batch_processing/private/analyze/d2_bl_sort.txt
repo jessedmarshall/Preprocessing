@@ -1,0 +1,171 @@
+
+SORTED
+B:\data\D2_BL\20141210_f777_unc01_unc02
+B:\data\D2_BL\20141210_M83_unc01_unc02
+B:\data\D2_BL\20141212_f777_unc01_unc03
+B:\data\D2_BL\20141213_f777_unc01_unc04
+B:\data\D2_BL\20141213_m83_unc01_unc03
+B:\data\D2_BL\20141215_f777_ari01_ari02
+B:\data\D2_BL\20141215_m83_unc01_unc04
+B:\data\D2_BL\20141216_f777_ari01_ari03
+B:\data\D2_BL\20141216_m83_ari01_ari02
+B:\data\D2_BL\20141217_f777_ari01_ari04
+B:\data\D2_BL\20141217_m83_ari01_ari03
+B:\data\D2_BL\20141219_f777_hal01_hal02
+B:\data\D2_BL\20141219_m83_ari01_ari04
+B:\data\D2_BL\20141220_f777_hal01_hal03
+B:\data\D2_BL\20141220_m83_hal01_hal02
+B:\data\D2_BL\20141221_m83_hal01_hal03
+B:\data\D2_BL\20141222_f777_hal01_hal04
+B:\data\D2_BL\20141222_m83_hal01_hal04
+B:\data\D2_BL\20150106_f777_veh_unc01_amph
+B:\data\D2_BL\20150107_m83_veh_unc01_amph
+B:\data\D2_BL\20150107_m787_unc01_unc02
+B:\data\D2_BL\20150108_m787_unc01_unc03
+B:\data\D2_BL\20150108_m790_unc01_unc02
+B:\data\D2_BL\20150108_m791_unc01_unc02
+B:\data\D2_BL\20150109_f777_veh_unc02_amph
+B:\data\D2_BL\20150121_m83_veh_unc02_amph
+B:\data\D2_BL\20150122_m789_unc01_unc02
+B:\data\D2_BL\20150122_f777_veh_unc03_amph
+B:\data\D2_BL\20150125_m83_veh_unc03_amph
+B:\data\D2_BL\20150125_m791_unc01_unc03
+B:\data\D2_BL\20150125_m790_unc01_unc03
+B:\data\D2_BL\20150126_m787_unc01_unc04
+B:\data\D2_BL\20150126_m789_unc01_unc03
+B:\data\D2_BL\20150126_m790_unc01_unc04
+B:\data\D2_BL\20150126_m789_unc01_unc03
+B:\data\D2_BL\20150127_m789_unc01_unc04
+B:\data\D2_BL\20150127_f777_veh_unc04_amph
+B:\data\D2_BL\20150127_m791_unc01_unc04
+
+
+sorted to backup
+
+
+PCA/ICA
+B:\data\D2_BL\20150128_m787_ari01_ari02
+B:\data\D2_BL\20150128_m790_ari01_ari02
+B:\data\D2_BL\20150128_m791_ari01_ari02
+B:\data\D2_BL\20150129_m789_ari01_ari02
+B:\data\D2_BL\20150130_m83_veh_unc04_amph
+B:\data\D2_BL\20150130_m787_ari01_ari03
+B:\data\D2_BL\20150202_f777_veh_ari01_amph
+B:\data\D2_BL\20150202_m83_veh_ari01_amph
+B:\data\D2_BL\20150202_m790_ari01_ari03
+B:\data\D2_BL\20150202_m791_ari01_ari03
+B:\data\D2_BL\20150203_m787_ari01_ari04
+B:\data\D2_BL\20150203_m789_ari01_ari03
+B:\data\D2_BL\20150203_m790_ari01_ari03
+B:\data\D2_BL\20150204_f777_veh_ari02_amph
+B:\data\D2_BL\20150204_m83_veh_ari02_amph
+B:\data\D2_BL\20150204_m789_ari01_ari04
+B:\data\D2_BL\20150204_m791_ari01_ari04
+B:\data\D2_BL\20150213_f777_veh_ari03_amph
+B:\data\D2_BL\20150213_m83_veh_ari03_amph
+B:\data\D2_BL\20150216_f777_veh_ari04_amph
+B:\data\D2_BL\20150216_m83_veh_ari04_amph
+B:\data\D2_BL\20150217_f777_veh_hal01_amph
+B:\data\D2_BL\20150217_m83_veh_hal01_amph
+B:\data\D2_BL\20150217_m787_hal01_hal02
+B:\data\D2_BL\20150217_m790_hal01_hal02
+B:\data\D2_BL\20150218_f777_veh_hal02_amph
+B:\data\D2_BL\20150218_m83_veh_hal02_amph
+B:\data\D2_BL\20150218_m787_hal01_hal03
+B:\data\D2_BL\20150218_m790_hal01_hal03
+B:\data\D2_BL\20150219_f777_veh_hal03_amph
+B:\data\D2_BL\20150219_m83_veh_hal03_amph
+B:\data\D2_BL\20150219_m787_hal01_hal04
+B:\data\D2_BL\20150219_m790_hal01_hal04
+B:\data\D2_BL\20150220_f777_veh_hal04_amph
+B:\data\D2_BL\20150220_m83_veh_hal04_amph
+B:\data\D2_BL\20150304_m787_veh_unc01_amph
+B:\data\D2_BL\20150304_m790_veh_unc01_amph
+B:\data\D2_BL\20150304_m791_hal01_hal02
+B:\data\D2_BL\20150305_m789_hal01_hal02
+B:\data\D2_BL\20150305_m791_hal01_hal03
+B:\data\D2_BL\20150306_m787_veh_unc02_amph
+B:\data\D2_BL\20150306_m790_veh_unc02_amph
+B:\data\D2_BL\20150306_m789_hal01_hal03
+B:\data\D2_BL\20150309_m787_veh_unc03_amph
+B:\data\D2_BL\20150309_m791_hal01_hal04
+B:\data\D2_BL\20150310_m789_hal01_hal04
+B:\data\D2_BL\20150310_m790_veh_unc03_amph
+B:\data\D2_BL\20150310_m791_veh_unc01_amph
+B:\data\D2_BL\20150311_m787_veh_unc04_amph
+B:\data\D2_BL\20150311_m789_veh_unc01_amph
+B:\data\D2_BL\20150312_m790_veh_unc04_amph
+B:\data\D2_BL\20150312_m791_veh_unc02_amph
+B:\data\D2_BL\20150313_m787_veh_ari01_amph
+B:\data\D2_BL\20150313_m789_veh_unc02_amph
+B:\data\D2_BL\20150316_m789_veh_unc03_amph
+B:\data\D2_BL\20150316_m791_veh_unc03_amph
+B:\data\D2_BL\20150317_m787_veh_ari02_amph
+B:\data\D2_BL\20150318_m789_veh_unc04_amph
+B:\data\D2_BL\20150318_m791_veh_unc04_amph
+B:\data\D2_BL\20150319_m787_veh_ari03_amph
+B:\data\D2_BL\20150320_m791_veh_ari01_amph
+B:\data\D2_BL\20150323_m789_veh_ari01_amph
+B:\data\D2_BL\20150323_m791_veh_ari02_amph
+B:\data\D2_BL\20150324_m787_veh_ari04_amph
+B:\data\D2_BL\20150325_m789_veh_ari02_amph
+B:\data\D2_BL\20150325_m791_veh_ari03_amph
+B:\data\D2_BL\20150326_m787_veh_hal01_amph
+B:\data\D2_BL\20150330_m789_veh_ari03_amph
+B:\data\D2_BL\20150331_m787_veh_hal02_amph
+B:\data\D2_BL\20150331_m791_veh_ari04_amph
+B:\data\D2_BL\20150401_m789_veh_ari04_amph
+B:\data\D2_BL\20150402_m787_veh_hal03_amph
+B:\data\D2_BL\20150402_m791_veh_hal01_amph
+B:\data\D2_BL\20150403_m789_veh_hal01_amph
+B:\data\D2_BL\20150406_m789_veh_hal02_amph
+B:\data\D2_BL\20150406_m791_veh_hal02_amph
+B:\data\D2_BL\20150407_m787_veh_hal04_amph
+B:\data\D2_BL\20150408_m789_veh_hal03_amph
+B:\data\D2_BL\20150408_m791_veh_hal03_amph
+
+
+Preprocessed
+
+
+
+
+
+Preprocess
+
+B:\data\D2_BL\20150409_m789_veh_hal04_amph
+B:\data\D2_BL\20150409_m791_veh_hal04_amph
+B:\data\D2_BL\
+
+
+
+
+### sorted
+## PCA/ICA
+# DFOF
+
+O1 = Vehicle
+02 = Low
+03 = Med
+04 = High
+
+
+ioptions.pcaicaList.('m83') = [400 250];
+ioptions.pcaicaList.('f777') = [700 500];later [500 350]; later [350 180]; later [180 120], ;ater [120 80]
+ioptions.pcaicaList.('m787') = [500 350];
+ioptions.pcaicaList.('m790') = [690 475]; [650 400];
+ioptions.pcaicaList.('m791') = [500 350]; [425 300] 
+ioptions.pcaicaList.('m789') = [700 500]; [650 400]
+
+PFC
+m83
+m81
+m88
+
+DMS D1
+m787
+790
+791
+
+DMS A2A
+f777

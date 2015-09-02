@@ -1,0 +1,82 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+# java.lang.OutOfMemoryError: requested 126681088 bytes for offset table expansion. Out of swap space?
+#
+#  Internal Error (blockOffsetTable.cpp:73), pid=3188, tid=14260
+#  Error: offset table expansion
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (16.3-b01 mixed mode windows-amd64 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000027c000):  JavaThread "Unknown thread" [_thread_in_vm, id=14260, stack(0x0000000002080000,0x0000000002180000)]
+
+Stack: [0x0000000002080000,0x0000000002180000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000027c000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=14260, stack(0x0000000002080000,0x0000000002180000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042e000 	C:\Program Files\ImageJ\jre\bin\javaw.exe
+0x000007fd53440000 - 0x000007fd53600000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fd50b10000 - 0x000007fd50c46000 	C:\Windows\system32\KERNEL32.DLL
+0x000007fd503c0000 - 0x000007fd504b3000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fd52c80000 - 0x000007fd52d5e000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fd52540000 - 0x000007fd5268c000 	C:\Windows\system32\USER32.dll
+0x000007fd52160000 - 0x000007fd52205000 	C:\Windows\system32\msvcrt.dll
+0x000007fd50ac0000 - 0x000007fd50b08000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fd52df0000 - 0x000007fd52f35000 	C:\Windows\system32\RPCRT4.dll
+0x000007fd522c0000 - 0x000007fd52401000 	C:\Windows\system32\GDI32.dll
+0x000007fd52220000 - 0x000007fd52259000 	C:\Windows\system32\IMM32.DLL
+0x000007fd52810000 - 0x000007fd52926000 	C:\Windows\system32\MSCTF.dll
+0x000000006d890000 - 0x000000006df35000 	C:\Program Files\ImageJ\jre\bin\server\jvm.dll
+0x000007fd4d360000 - 0x000007fd4d380000 	C:\Windows\SYSTEM32\WINMM.dll
+0x000007fd4dc00000 - 0x000007fd4dc33000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x000007fd50780000 - 0x000007fd507cf000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x000007fd504c0000 - 0x000007fd504e2000 	C:\Windows\system32\DEVOBJ.dll
+0x000000006d800000 - 0x000000006d80e000 	C:\Program Files\ImageJ\jre\bin\verify.dll
+0x000000006d450000 - 0x000000006d477000 	C:\Program Files\ImageJ\jre\bin\java.dll
+0x000000006d3b0000 - 0x000000006d3ba000 	C:\Program Files\ImageJ\jre\bin\hpi.dll
+0x000007fd52210000 - 0x000007fd52217000 	C:\Windows\system32\PSAPI.DLL
+0x000000006d850000 - 0x000000006d862000 	C:\Program Files\ImageJ\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx62000m -Xms62000m -Xincgc -XX:+DisableExplicitGC -XX:+UseCompressedOops -Dplugins.dir=C:\Program Files\ImageJ 
+java_command: C:\Program Files\ImageJ\ij.jar -macro registerFiles.ijm A:\biafra\data\miniscope\epmaze\p109\2013_09_30_p109_m493_epmaze1\concat\
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MATLAB\R2012b\runtime\win64;C:\Program Files\MATLAB\R2012b\bin;C:\Program Files\TortoiseSVN\bin;C:\cygwin64\bin;C:\b\programs\miktex-portable\miktex\bin;C:\Python26\;C:\Program Files\ImageJ\jre\bin;C:\b\programs\ffmpeg-20131021-git-712eff4-win64-static\bin
+USERNAME=biafra
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 8 (16 cores per cpu, 2 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 67050564k(58267032k free), swap 146902928k(64572k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (16.3-b01) for windows-amd64 JRE (1.6.0_20-b02), built on Apr 12 2010 13:44:19 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Fri Nov 08 19:25:29 2013
+elapsed time: 2 seconds
+

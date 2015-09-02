@@ -1,0 +1,4 @@
+#C:\Users\Jones Parker\Desktop\jdm_test\concat_recording_jdm_test_stack2.h5
+C:\Users\Jones Parker\Desktop\jdm_test,500,300
+#C:\Users\Jones Parker\Desktop\jdm_test\biafra_bandpass
+#C:\Users\Jones Parker\Desktop\jdm_test\imagej_bandpass

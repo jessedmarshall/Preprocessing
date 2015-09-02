@@ -1,0 +1,4 @@
+\\171.65.101.212\team_bg\data\miniscope\concat\p230\2014_12_17_p230_m723_mount01
+\\171.65.101.212\team_bg\data\miniscope\concat\p230\2014_12_17_p230_m723_openfield01
+\\171.65.101.212\team_bg\data\miniscope\concat\p230\2014_12_17_p230_m724_mount01
+\\171.65.101.212\team_bg\data\miniscope\concat\p230\2014_12_17_p230_m724_openfield01

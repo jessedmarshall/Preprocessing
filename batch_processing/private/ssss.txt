@@ -1,0 +1,5 @@
+options.continuousStimulusTable	 = getFileList('A:\biafra\data\behavior\p215\tracking\cleaned\','cleaned');
+options.continuousStimulusNameArray = {'XM','YM','Angle','XM_cm','YM_cm'};
+options.continuousStimulusSaveNameArray = strrep(options.continuousStimulusNameArray,'_','__');
+options.continuousStimulusIdArray = [1 2 3 4 5];
+options.continuousStimulusTimeSeq = {[-5:5],[-5:5],[-5:5],[-5:5],[-5:5]};

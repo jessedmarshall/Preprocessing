@@ -1,0 +1,12 @@
+controllerAnalysis('folderListInfo','private\analyze\small_grin.txt','downsampleSaveFolder','B:\data\pav\p104\small_grin\');
+controllerAnalysis('folderListInfo','private\analyze\small_grin.txt','downsampleSaveFolder','B:\data\pav\p104\small_grin\');
+
+
+moveFilesToFolders('A:\data\pav\p104\Small_GRIN_PAV\','B:\data\pav\p104\small_grin','srcFolderFilterRegexp','14')
+% VIEW CONCAT FILES and pre-process
+controllerAnalysis('folderListInfo','private\analyze\small_grin.txt');
+% crop/view turboreg
+controllerAnalysis('folderListInfo','private\analyze\small_grin.txt','fileFilterRegexp','5hz');
+% pcaica
+pcaicaList.('F887') = [500 300];
+controllerAnalysis('folderListInfo','private\analyze\small_grin.txt','fileFilterRegexp','cropped','pcaicaList',pcaicaList);
